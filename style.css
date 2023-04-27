@@ -1,0 +1,140 @@
+body {
+    padding-top: 40px;
+    background-image:url("./img/black-pokeballs.jpeg");
+    background-size: 30vw;
+    background-repeat: repeat;
+}
+/* creates shadow around title */
+.title img {
+    -webkit-filter: drop-shadow(3px 3px 3px rgb(70, 70, 70)) 
+                drop-shadow(-3px -3px 3px rgb(81, 81, 81));
+  filter: drop-shadow(3px 3px 3px rgb(70, 70, 70)) 
+          drop-shadow(-3px -3px 3px rgb(81, 81, 81));
+}
+
+/* input box */
+input {
+    padding-left: 10px;
+    height: 35px;
+    box-shadow: 3px 3px 5px rgb(51, 51, 51);
+    border-radius: 10px;
+}
+
+/* Submit button */
+button {
+    margin-top: 13px;
+    box-shadow: 3px 3px 5px rgb(51, 51, 51);
+}
+
+.btn {
+    padding:2px 6px;
+}
+/* container for response */
+.container {
+    display: flex;
+    justify-content:center;
+}
+
+/* The text for if a pokemon is not found */
+.loading {
+    text-shadow: 1px 1px 1px rgb(207, 207, 207);
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+/* The text for if a pokemon is not found */
+.not-found, .loading {
+    font-size: 15px;
+    font-weight: 300;
+    border: 1px solid black;
+    display: flex;
+    box-shadow: 1px 1px 1px rgb(35, 34, 34);
+    text-align: center;
+    padding: 10px 10px;
+    border-radius: 10px;
+}
+
+.not-found {
+    text-shadow: 1px 1px 1px black;
+    color:rgb(242, 238, 233);
+    background-color: rgba(168, 43, 43, 1);
+}
+
+/* Everything below this is for the pokemon card */
+.basic-card { 
+    background-image: url("./img/basic-pokemon-card-background.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+
+.card {
+    border: 0px;
+    width:100%;
+    display: grid; 
+    grid-auto-flow: column;
+    grid-auto-columns: fit-column; 
+    grid-auto-rows: auto; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: 0.14fr .9fr 1fr; 
+
+    gap: 0px 0px; 
+    grid-template-areas: 
+        ".card-title-top"
+        ".card-img-top"
+        ".card-body";
+
+    box-shadow: 5px 5px 5px rgb(67, 67, 67);
+}
+.card-body {
+    padding:0;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+    text-align:center;
+    justify-self:flex-start;
+    margin-top:5px;
+    width:100%;
+}
+
+.card-title-top {
+    margin-top:9px;
+    padding:0;
+    margin-bottom:0;
+    text-transform: capitalize;
+}
+
+.card-title-basic {
+    justify-self:flex-start;
+    margin-left:18px;
+    font-size:18px;
+    text-shadow: 1px 1px 1px rgb(163, 163, 163);
+}
+
+.card-img-top {
+    width:58%;
+    padding:0;
+    margin:0;
+    align-self:center;
+    justify-self:center;
+}
+
+.list-group {
+    width: 90%;
+    justify-self:flex-start;
+    margin-top:6px;
+}
+
+.list-group-item {
+    background-color:rgb(221, 221, 221);
+    color:rgb(0, 0, 0);
+}
+.card-text {
+    font-size: 8px;
+    padding:0;
+    margin:0;
+    height:14px;
+    text-shadow: 1px 1px 1px rgb(225, 225, 225);
+}
+
